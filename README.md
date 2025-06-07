@@ -91,3 +91,28 @@ After completing the setup:
     This will launch the application window.
 
 ## 📂 Project Structure (Key Files)
+MovieDatabaseApp/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/
+│   │   │       └── username/
+│   │   │           └── moviesapp/
+│   │   │               ├── MainApplication.java       # Main entry point for the JavaFX app
+│   │   │               ├── MainController.java        # Controller for the main movie list view
+│   │   │               ├── MovieDetailController.java # Controller for the individual movie detail view
+│   │   │               ├── models/
+│   │   │               │   └── Movie.java             # POJO for movie data
+│   │   │               │   └── MoviesResponse.java    # POJO for API response structure
+│   │   │               └── service/
+│   │   │                   └── TmdbApiService.java    # Retrofit interface for TMDB API calls
+│   │   └── resources/
+│   │       ├── main-view.fxml                       # FXML layout for the main movie list
+│   │       ├── movie-detail-view.fxml               # FXML layout for the movie detail screen
+│   │       └── style.css                            # Custom CSS for styling the application
+├── pom.xml                                          # Maven project configuration
+└── README.md                                        # This file
+
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE) 
