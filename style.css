@@ -1,0 +1,148 @@
+/* General Application Styling */
+.root {
+    -fx-font-family: "Segoe UI", "Arial", sans-serif; /* Modern, clean font */
+    -fx-background-color: #f0f2f5; /* Light grey background for the whole app */
+}
+
+/* Main Container (VBox in main-view.fxml and movie-detail-view.fxml) */
+.vbox {
+    -fx-background-color: #ffffff; /* White background for main content area */
+    -fx-background-radius: 8px; /* Slightly rounded corners */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 5); /* Subtle shadow */
+    -fx-padding: 20px; /* Internal padding */
+}
+
+/* Header Labels */
+.label-header {
+    -fx-font-size: 28px; /* Larger font for main titles */
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333; /* Darker text color */
+    -fx-padding: 0 0 10px 0; /* Add some space below the header */
+}
+
+/* Sub-header Labels (like "Overview" in detail view) */
+.label-subheader {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #555555;
+    -fx-padding: 10px 0 5px 0;
+}
+
+/* General Labels */
+.label {
+    -fx-text-fill: #333333;
+}
+
+/* Input Fields (TextField, ComboBox) */
+.text-field, .combo-box {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5px;
+    -fx-border-width: 1px;
+    -fx-padding: 8px 10px;
+    -fx-font-size: 14px;
+}
+
+.text-field:focused, .combo-box:focused {
+    -fx-border-color: #007bff; /* Highlight color on focus */
+    -fx-effect: innershadow(gaussian, rgba(0, 123, 255, 0.2), 5, 0, 0, 0);
+}
+
+/* Buttons */
+.button {
+    -fx-background-color: #007bff; /* Primary blue color */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8px 15px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand; /* Changes cursor to hand on hover */
+}
+
+.button:hover {
+    -fx-background-color: #0056b3; /* Darker blue on hover */
+}
+
+.button:pressed {
+    -fx-background-color: #004085; /* Even darker on press */
+}
+
+/* ListView */
+.list-view {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e0e0e0; /* Light border */
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+/* ListView Cells */
+.list-cell {
+    -fx-background-color: #ffffff;
+    -fx-padding: 10px;
+    -fx-border-color: #f0f0f0; /* Subtle separator */
+    -fx-border-width: 0 0 1px 0;
+    -fx-alignment: center-left; /* Align content to the left */
+}
+
+.list-cell:empty {
+    /* Hide empty cells to prevent visible separators */
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+}
+
+.list-cell:hover {
+    -fx-background-color: #e9ecef; /* Light highlight on hover */
+}
+
+.list-cell:selected {
+    -fx-background-color: #cce5ff; /* Light blue on selection */
+    -fx-text-fill: #333333; /* Ensure text is readable */
+}
+
+/* Specific elements like error message */
+#errorMessageLabel {
+    -fx-text-fill: #dc3545; /* Bootstrap red */
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-background-color: #f8d7da; /* Light red background */
+    -fx-border-color: #f5c6cb;
+    -fx-border-radius: 5px;
+    -fx-padding: 10px;
+    -fx-alignment: center;
+}
+
+/* Movie Detail View Specifics */
+#posterImageView {
+    -fx-border-color: #cccccc;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+}
+
+#taglineLabel {
+    -fx-font-style: italic;
+    -fx-text-fill: #6c757d; /* Muted grey */
+    -fx-font-size: 15px;
+}
+
+#ratingLabel, #releaseDateLabel, #runtimeLabel {
+    -fx-font-weight: normal; /* Override bold if accidentally inherited */
+}
+
+/* TextFlow for genres */
+#genresTextFlow .text {
+    -fx-fill: #007bff; /* Blue text for genres */
+    -fx-font-size: 13px;
+    -fx-background-color: #e7f2ff; /* Light blue background for genre "tags" */
+    -fx-padding: 3px 8px;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-border-color: #007bff;
+    -fx-border-width: 0.5px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 3, 0, 0, 1); /* Very subtle shadow */
+}
+
+/* Adjust TextFlow to handle multiple Text nodes for genres with spacing */
+.text-flow {
+    -fx-line-spacing: 5px; /* Spacing between lines of text if it wraps */
+}
